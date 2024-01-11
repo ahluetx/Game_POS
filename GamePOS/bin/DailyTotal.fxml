@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.tridenttech.cpt237.game.controllers.DailyTotalController">
+   <children>
+       <TextArea fx:id="dailyTotalTextArea" editable="false" prefHeight="294.0" prefWidth="465.0" wrapText="true" />
+       <Button fx:id="showFormatBreakdownButton" text="Show Format Breakdown" onAction="#onShowFormatBreakdown"/>
+   </children>
+</VBox>

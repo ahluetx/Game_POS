@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.tridenttech.cpt237.game.controllers.MainController">
+
+    <top>
+        <HBox spacing="10">
+           <children>
+               <Label text="Format:" />
+               <ComboBox fx:id="formatComboBox" />
+               <TextField fx:id="searchField" onKeyReleased="#onSearch" />
+               <Button fx:id="addToCartButton" onAction="#onAddToCart" text="Add to Cart" />
+			   <Button fx:id="checkoutButton" onAction="#onCheckout" text="Checkout" />
+
+               
+           </children>
+            <!-- Add more filter options here if needed -->
+        </HBox>
+    </top>
+    <center>
+        <TableView fx:id="gamesTable" prefHeight="433.0" prefWidth="329.0">
+            <columns>
+                <TableColumn fx:id="titleColumn" text="Title" />
+                <TableColumn fx:id="formatColumn" text="Format" />
+                <TableColumn fx:id="copiesColumn" prefWidth="109.0" text="Available Copies" />
+                <!-- Add more columns as needed -->
+            </columns>
+        </TableView>
+    </center>
+    <bottom>
+    	
+        <Button fx:id="dailyTotalButton" text="Show Daily Total" onAction="#onShowDailyTotals"/>
+    </bottom>
+    <!-- You can add other UI elements to bottom, left, and right regions as needed -->
+</BorderPane>
